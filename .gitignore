@@ -1,0 +1,6 @@
+node_modules
+.grunt
+release
+release-standalone
+build
+npm-debug.log

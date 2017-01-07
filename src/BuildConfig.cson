@@ -1,0 +1,87 @@
+{
+  pageTitle: "$author"
+  googleFonts: [
+    'Open+Sans'
+    'Nunito'
+  ]
+  linkedCSS: [
+    "css/normalize"
+    "css/pure-min"
+    "css/font-awesome"
+    "css/style"
+    "css/typed"
+    "css/github-calendar"
+  ]
+  linkedJS: [
+    "js/jquery"
+    "js/typed.min"
+    "js/github-calendar.min"
+    "js/parallax.min"
+    "js/index"
+  ]
+  cards: [
+    {
+      name: "atom-terminal-panel"
+      descr: "Plugin for ATOM Editor. Advanced terminal interface for Atom editor"
+      badges: [
+        "apm/v/atom-terminal-panel.svg?style=flat-square"
+        "apm/dm/atom-terminal-panel.svg?style=flat-square"
+        "apm/l/atom-terminal-panel.svg?style=flat-square"
+      ]
+      icon: "assets/atom.png"
+      cols: ["#eee", "#584B4F", "#5A5A5A"]
+      link: "https://github.com/isis97/atom-terminal-panel"
+    }
+    {
+      name: "Autocomplete JS"
+      descr: "The simplest jQuery plugin for creating autocomplete boxes with dynamically generated suggestions."
+      badges: [
+        "badge/platform-node-green.svg?style=flat-square&logoWidth=20&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAC8AAAAyCAYAAADMb4LpAAAABmJLR0QA%2FwD%2FAP%2BgvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4AgTDxIs6TxZnwAAATRJREFUaN7t2q0OwjAQB%2FC2FoPEgMMgMaAxPAcJCYo3ICEzvAGG8A4ERULIJAZDCDMLFkGCw3MoBITB%2BnHrFv59gO1319st6VUSkSjqUlwPDkJFQahYMyNdZz4JPO7cZW7xabPsMgjrsomva63yCEJFm9OEvGfetqZtd8EIv4iGdLhMndWuaRDaeK4OMmgdRaXUkCx47rZnsgs%2F8VmhTYJI7DbRZUm%2B4M%2BkreIRaWfeJ1pnF17weUP%2FCkKJAi%2FggQceeOCBBx544IEHHnjggQce%2BH%2FBc4xeXK1PtsSD1rycnn1LaKFPiVOdz59ve5rvmpmgu%2FWZaFf7qcpXazLCvQu635zRTMp1EJnNpFwGYdvdlK%2BXu2jLhZ6AZ3b3oNfcilq57fQnKDmurLwHwPXnlrhv42k9AGprq6tU7LX3AAAAAElFTkSuQmCC"
+        "npm/v/jquery-autocomplete-js.svg?style=flat-square"
+        "npm/l/jquery-autocomplete-js.svg?style=flat-square"
+        "npm/dm/jquery-autocomplete-js.svg?style=flat-square"
+      ]
+      icon: "assets/js.png"
+      cols: ["#000000", "#FFF056", "#FFFF5A"]
+      link: "http://isis97.github.io/autocomplete-js/"
+    }
+    {
+      name: "Tic Tac Console"
+      descr: "The game is n-dimensional classic tic-tac-toe game inside Windows terminal. Utilizes basic terminal hid-input, ascii dialog boxes and even more strange stuff!"
+      badges: [
+        "badge/platform-windows-blue.svg?style=flat-square&logoWidth=20&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA%2FwD%2FAP%2BgvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJTUUH4AgSEisSipueyAAAAHBJREFUSMdjZKA2WPv%2BPzKXkSxDiuf%2FZ7AKIEopbgsW3v%2FPwCOA4AcLMqK7jhjAQo4mUgATA43BqAWjFlADiCvQ1HjsuXNJIwPD%2BgmMtLMAGyCzqBhNRaMWDAELWBiCBRmJrcDJy2hUaj1Q3wIiLQcAUjQgoD1kMJYAAAAASUVORK5CYII%3D"
+      ]
+      icon: "assets/terminal.png"
+      cols: ["#eee", "#000000", "#999999"]
+      link: "https://github.com/isis97/TicTacConsole"
+    }
+    {
+      name: "WACCGL"
+      descr: "Windows Advanced Console Componental Graphics Library. For making mouse-supported-ascii-based-fancy-dialog-boxes-and-ui inside Windows console window!"
+      badges: [
+        "badge/platform-windows-blue.svg?style=flat-square&logoWidth=20&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA%2FwD%2FAP%2BgvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJTUUH4AgSEisSipueyAAAAHBJREFUSMdjZKA2WPv%2BPzKXkSxDiuf%2FZ7AKIEopbgsW3v%2FPwCOA4AcLMqK7jhjAQo4mUgATA43BqAWjFlADiCvQ1HjsuXNJIwPD%2BgmMtLMAGyCzqBhNRaMWDAELWBiCBRmJrcDJy2hUaj1Q3wIiLQcAUjQgoD1kMJYAAAAASUVORK5CYII%3D"
+      ]
+      icon: "assets/terminal.png"
+      cols: ["#eee", "#000000", "#999999"]
+      link: "https://github.com/isis97/The-Socket"
+    }
+    {
+      name: "The-Socket"
+      descr: "C/C++ Socket Library. Works on Linux and Windows."
+      badges: [
+        "badge/platform-windows-blue.svg?style=flat-square&logoWidth=20&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA%2FwD%2FAP%2BgvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJTUUH4AgSEisSipueyAAAAHBJREFUSMdjZKA2WPv%2BPzKXkSxDiuf%2FZ7AKIEopbgsW3v%2FPwCOA4AcLMqK7jhjAQo4mUgATA43BqAWjFlADiCvQ1HjsuXNJIwPD%2BgmMtLMAGyCzqBhNRaMWDAELWBiCBRmJrcDJy2hUaj1Q3wIiLQcAUjQgoD1kMJYAAAAASUVORK5CYII%3D"
+      ]
+      icon: "assets/internet.png"
+      cols: ["#eee", "#1683DC", "#3264FA"]
+      link: "https://github.com/isis97/The-Socket"
+    }
+    {
+      name: "My codepen"
+      descr: "See all my pens and collections! :)"
+      badges: []
+      icon: "assets/codepen.png"
+      cols: ["#000000", "#CCCCCC", "#EEEEEE"]
+      link: "http://codepen.io/isis97/"
+    }
+  ]
+}

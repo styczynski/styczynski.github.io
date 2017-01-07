@@ -1,0 +1,13 @@
+#!/bin/bash
+if "$@" == "install"
+then
+  npm install .
+  npm prune
+else
+  if [[ -z "${@// }" ]]
+  then
+    npm run help -s
+  else
+    npm run "$@" -s
+  fi
+fi
