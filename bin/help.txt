@@ -7,4 +7,4 @@
       portfolio clean - Cleans build directory
       portfolio build - Builds development version (run portfolio install before building otherwise errors will appear!)
       portfolio release - Build release version
-      portfolio dev - Starts autobuilds server at localhost:3000
+      portfolio server - Starts autobuilds server at localhost:3000

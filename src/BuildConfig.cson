@@ -43,7 +43,7 @@
       ]
       icon: "assets/js.png"
       cols: ["#000000", "#FFF056", "#FFFF5A"]
-      link: "http://isis97.github.io/autocomplete-js/"
+      link: "http://piotr.styczynski.ml/autocomplete-js/"
     }
     {
       name: "Tic Tac Console"

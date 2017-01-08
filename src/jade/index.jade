@@ -2,6 +2,7 @@ doctype html
 html
   head
     meta(charset="UTF-8")
+    meta(name="viewport", content="width=600, initial-scale=1")
     title #{pageTitle}
     each googleFontPath in googleFonts
       link(href="https://fonts.googleapis.com/css?family=#{googleFontPath}" rel='stylesheet' type='text/css')
@@ -34,39 +35,44 @@ html
           p
             span.splash-subbutton.pure-button.pure-button-primary(id='hiremebutton') Hire me!
     .content-wrapper
-      .content
-        h2.content-head.is-center Meet me!
-        .pure-g
-          .l-box.pure-u-1.pure-u-md-1-2.pure-u-lg-1-4(id="cardbox")
-            h3.content-subhead
-              | Short bio
-            p
-              | I'm a student of Mathematics, IT and Mechanics Faculty at Warsaw University
-              br
-              | I'm keen on programming and doing many things for fun.
-              br
-              | 
-              br
-              | You can actually see few of them below:
-              .card-wrapper
-                -var lshift = 0;
-                -var tshift = 0;
-                each card in cards
-                  - ++lshift; if(lshift>3) {lshift=1;++tshift;};
-                  #card-c0.card-container(class="card-z-#{tshift}", style="left: #{(lshift-2)*90}%; top: #{tshift*30}%; background: linear-gradient(to bottom, #{card.cols[1]} 30%, #{card.cols[2]} 100%);")
-                    #card-i0.card-image(style="background: linear-gradient(to bottom, #{card.cols[1]} 30%, #{card.cols[2]} 100%);")
-                      .card-city
-                        img(style='margin-top: 15%; margin-left: 20%; margin-right: 20%; height: 30%; width: 60%;', src="#{card.icon}")
-                    #card-s0.card-story(style="background: linear-gradient(to bottom, #{card.cols[2]} 30%, #{card.cols[1]} 100%); color: #{card.cols[0]};")
-                      .card-info(style="color: #{card.cols[0]};")
-                        .card-h3(style="color: #{card.cols[0]};")
-                          each badge in card.badges
-                            img(src="https://img.shields.io/#{badge}")
-                        .card-h3(style="color: #{card.cols[0]};") #{card.name}
-                        p.card-p(style="color: #{card.cols[0]};")
-                          | #{card.descr}
-                      a(href="#{card.link}")
-                        div.card-button(style="color: #{card.cols[1]}; background-color: #{card.cols[0]};") See this!
+      .content.first
+        h2.content-head.first.is-center(style="margin-top: 0;")
+          | Meet me!
+          .arrowbox
+            .arrow
+        .conent-body
+          .pure-g
+            .l-box.pure-u-1.pure-u-md-1-2.pure-u-lg-1-4(id="cardbox")
+              h3.content-subhead
+                | Short bio
+              p
+                | I'm a student of Mathematics, IT and Mechanics Faculty at Warsaw University
+                br
+                | I'm keen on programming and doing many things for fun.
+                br
+                | 
+                br
+                | You can actually see few of them below: left: #{(lshift-2)*80}%; 
+                .card-wrapper
+                  -var lshift = 0;
+                  -var tshift = 0;
+                  each card in cards
+                    - ++lshift; if(lshift>3) {lshift=1;++tshift;};
+                    .card-container(class="card-z-#{tshift}", style="box-shadow: 0px 20px 50px #{card.cols[2]}; left: #{(lshift-2)*75}%; top: #{tshift*40}%; background: linear-gradient(to bottom, #{card.cols[1]} 30%, #{card.cols[2]} 100%);")
+                      .card-image(style="background: linear-gradient(to bottom, #{card.cols[1]} 30%, #{card.cols[2]} 100%);")
+                        .card-city
+                          img(style='margin-top: 15%; margin-left: 20%; margin-right: 20%; height: 30%; width: 60%;', src="#{card.icon}")
+                      .card-story(style="background: linear-gradient(to bottom, #{card.cols[2]} 30%, #{card.cols[1]} 100%); color: #{card.cols[0]};")
+                        .card-info(style="color: #{card.cols[0]};")
+                          .card-h3(style="color: #{card.cols[0]};")
+                            each badge in card.badges
+                              img(src="https://img.shields.io/#{badge}")
+                          .card-h3(style="color: #{card.cols[0]};") #{card.name}
+                          p.card-p(style="color: #{card.cols[0]};")
+                            | #{card.descr}
+                        a(href="#{card.link}")
+                          div.card-button(style="color: #{card.cols[1]}; background-color: #{card.cols[0]};") #{card.name}
+                          div.card-button-shadow(style="color: #{card.cols[0]}; background-color: #{card.cols[1]};") See this!
       .content(style="padding-top:80px;")
         .pure-g
           .l-box.pure-u-1.pure-u-md-1-2.pure-u-lg-1-4(id="cardbox")

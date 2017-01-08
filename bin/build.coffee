@@ -145,7 +145,7 @@ module.exports = (grunt) ->
     'clean'
   ]
 
-  grunt.registerTask 'dev', [
+  grunt.registerTask 'server', [
     'build'
     'connect'
     'watch'

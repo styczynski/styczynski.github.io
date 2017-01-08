@@ -1,3 +1,7 @@
+html, body
+  max-width 100%
+  overflow-x hidden
+
 body
   max-width 100%
   font-size 14px
@@ -109,7 +113,7 @@ a
   z-index 1
   overflow hidden
   width 100%
-  height 82%
+  height 72%
   top 0
   left 0
   position fixed !important
@@ -172,16 +176,34 @@ a
 
 .content-wrapper
   position absolute
-  top 80%
+  top 70%
   width 100%
   min-height 12%
   z-index 2
   background white
 
+.content.first
+  width 100%
+  padding 0
+  & > .conent-body
+    margin 2em
+
 .content-head
   font-weight 400
   letter-spacing 0.1em
   margin 2em 0 1em
+  width 100%
+  &.first
+    font-size 8vh
+    height 30vh
+    background gainsboro
+    text-align center
+    vertical-align middle
+    line-height 25vh
+    padding 0.5em 0 1em
+
+.conent-body
+  margin-top 0
 
 .content-head-ribbon
   color white
@@ -198,26 +220,22 @@ a
 .footer
   background #111
 
-@media (min-width: 48em)
-  body
-    font-size 16px
-  .content
-    padding 1em
-  .home-menu
-    text-align left
-      ul
-        float right
-  .splash
-    width 50%
-    height 50%
-  .splash-head-title
-    font-size 250%
-  .l-box-lrg
-    border none
+.arrowbox
+  position relative
+  bottom 40px
+  left 50%
+  margin-left -20px
+  width 40px
+  height 40px
+  background-size contain
 
-@media (min-width: 78em)
-  .splash-head-title
-    font-size 300%
+.arrow
+  width 0
+  height 0
+  border-left 20px solid transparent
+  border-right 20px solid transparent
+  border-top 20px solid #1f8dd6
+  animation bounce 1s linear 1
 
 #calendar_ribbon
   height 100%
@@ -230,9 +248,7 @@ a
 
 
 .card-wrapper
-    position absolute
-    top 12%
-    left 40%
+    margin auto
     width 300px
     height 500px
     perspective 900px
@@ -247,33 +263,40 @@ a
     position absolute
     top 0%
     width 100%
-    height 100%
+    height 50%
+    margin-right 10%
     transition .5s all ease
-    transform rotateX(60deg) scale(0.7)
+    transform rotateX(0deg) scale(0.7) translate(0, 50%)
     perspective 900px
     box-shadow 0px 20px 50px #555
+    border-radius 25px
     animation entry 1s linear 1
+    & .card-story
+      height 55%
+      opacity 0
+      animation fadeOut 0.3s ease-out
+    & .card-info
+      max-height 900px
+      opacity 0
+      animation fadeOut 0.3s ease-out
+    & .card-image
+      height 100%
     &:hover
-        transform rotate(0deg) scale(1) translateY(10px)
-        transition .5s all ease
-        z-index 9999
-
-#card-c0
-    position absolute
-    top 0%
-    left 0%
-    width 100%
-    height 100%
-    background linear-gradient(to bottom, #eba65b 30%, #d99267 100%)
-    box-shadow 0px 20px 100px #555
-    &:hover
-      z-index 999999
-
-#card-c1
-    background linear-gradient(to bottom, #59476f 30%, #7b88d1 100%)
-    box-shadow 0px 20px 100px #555
-    left 100%
-    z-index 0
+      height 100%
+      & .card-image
+        height 45%
+        border-radius 25px 25px 0px 0px
+      & .card-story
+        height 55%
+        animation fadeIn 1s ease-out
+        opacity 1
+      & .card-info
+        max-height 900px
+        animation fadeIn 1s ease-out
+        opacity 1
+      transform rotate(0deg) scale(1.0) translateY(10px)
+      transition .5s all ease
+      z-index 9999
 
 .card-image
     position absolute
@@ -282,9 +305,7 @@ a
     width 100%
     height 45%
     background linear-gradient(to top, #eba65b 30%, #d99267 100%)
-
-#card-i1
-    background linear-gradient(to bottom, #59476f 30%, #7b88d1 100%)
+    border-radius 25px
 
 .card-st0
     fill #a25a62
@@ -305,13 +326,12 @@ a
     width 100%
     background linear-gradient(to bottom, #eba65b 0%, #d99267 40%)
     z-index 30
-
-#card-s1
-    background linear-gradient(to top, #5b62a2 0%, #7b88d1 100%)
+    border-radius 0px 0px 25px 25px
 
 .card-info
     position absolute
     top 10%
+    border-radius 0px 0px 25px 25px
 
 .card-h3
     text-align center
@@ -355,6 +375,115 @@ p.card-p
   border-radius 1px
   text-align center
   vertical-align middle
+  animation fadeIn 0.3s ease-out
+  opacity 1
+  &:hover
+    animation fadeOut 0.3s ease-out
+    opacity 0
+
+.card-button-shadow
+  position absolute
+  top 80%
+  width 100%
+  height 40px
+  line-height 40px
+  font-weight 300
+  font-size 22px
+  border 0px solid
+  border-radius 1px
+  text-align center
+  vertical-align middle
+  animation fadeOut 0.3s ease-out
+  opacity 0
+  &:hover
+    animation fadeIn 0.3s ease-out
+    opacity 1
+
 
 #cardbox
   height: 650px
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0)
+  }
+	40% {
+    transform: translateY(-30px)
+  }
+	60% {
+    transform: translateY(-15px)
+  }
+}
+
+@media (min-width: 48em)
+  body
+    font-size 16px
+  .content
+    padding 1em
+  .home-menu
+    text-align left
+      ul
+        float right
+  .splash
+    width 50%
+    height 50%
+  .splash-head-title
+    font-size 250%
+  .l-box-lrg
+    border none
+
+@media (min-width: 78em)
+  .splash-head-title
+    font-size 300%
+
+@media (max-width: 430px)
+  .splash-head
+    width 90%
+  .splash-head-title
+    font-size 200%
+  .splash-subhead
+    font-size 3vw
+    max-width 50vw
+  .splash-subbutton
+    font-size 150%
+  .content-head.first
+    font-size 5vw
+  .card-wrapper
+    transform scale(0.4)
+    margin-right 33vw
+
+@media (max-width: 800px)
+  .splash-head
+    width 90%
+  .splash-head-title
+    font-size 200%
+  .splash-subhead
+    font-size 3vw
+    max-width 50vw
+  .splash-subbutton
+    font-size 150%
+  .content-head.first
+    font-size 5vw
+  .card-wrapper
+    transform scale(0.6)
+    margin-right 33vw
