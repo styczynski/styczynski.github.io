@@ -8,21 +8,6 @@ body
   font-family 'Comfortaa' cursive
   background-color	#000000
 
-.navbar
-  position fixed
-  right 10px
-  top 100px
-  width 25px
-  z-index 999999
-  mix-blend-mode multiply
-  font-family sans-serif
-
-span.navsection
-  display block
-  width 0
-  height 0
-  opacity 0
-
 .logo
   width 100%
   color hsla(207, 45%, 15%, 1)
@@ -257,18 +242,22 @@ a
   border-left 20px solid transparent
   border-right 20px solid transparent
   border-top 20px solid #1f8dd6
-  animation bounce 0.5s linear 1
+  animation bounce 1s linear 1
 
-.ribbon
-  padding 0px
-  margin-top 360px
-  background-color #1f8dd6
-  height 50px
+#calendar_ribbon
+  height 100%
+  overflow hidden
+  margin 0 0 0 0
+  padding 0 0 0 0
+  & > svg
+    height 100%
+    width 200%
+
 
 .card-wrapper
     margin auto
     width 300px
-    height 700px
+    height 500px
     perspective 900px
 
 .card-z-0
@@ -277,39 +266,6 @@ a
 .card-z-1
   z-index -1
 
-.card-z-2
-  z-index -2
-
-.card-z-3
-  z-index -3
-
-.card-img-src
-  filter opacity(50%) saturate(0)
-
-p.text-box
-  color #444444
-  & b
-    font-weight: 300
-
-.boxy
-  width 100px
-  height 100px
-  display inline-block
-  margin-left -5px
-  margin-top -10px
-  padding 0px
-  &.nav
-    width 25px
-    height 25px
-    background-color rgb(31, 141, 214)
-    cursor pointer
-    & span
-      margin-left -80px
-      font-weight 600
-      font-size 15px
-      color black
-    &.active
-      background-color darkslategrey
 .card-container
     position absolute
     top 0%
@@ -319,9 +275,9 @@ p.text-box
     transition .5s all ease
     transform rotateX(0deg) scale(0.7) translate(0, 50%)
     perspective 900px
-    cursor pointer
-
-    animation entry 0.5s linear 1
+    box-shadow 0px 20px 50px #555
+    border-radius 25px
+    animation entry 1s linear 1
     & .card-story
       height 55%
       opacity 0
@@ -333,33 +289,29 @@ p.text-box
     & .card-image
       height 100%
     &:hover
-      cursor default
-      height 60%
-      & .card-img-src
-        filter none
+      height 100%
       & .card-image
-        height 100%
+        height 45%
         border-radius 25px 25px 0px 0px
-        transform scale(0.5) translateY(-180px) translateX(-110%)
-        z-index 9999
       & .card-story
-        height 80%
-        animation fadeIn 0.5s ease-out
+        height 55%
+        animation fadeIn 1s ease-out
         opacity 1
       & .card-info
         max-height 900px
-        animation fadeIn 0.5s ease-out
+        animation fadeIn 1s ease-out
         opacity 1
-      transform rotate(0deg) scale(0.9) translateY(80px)
+      transform rotate(0deg) scale(1.0) translateY(10px)
       transition .5s all ease
       z-index 9999
 
 .card-image
     position absolute
-    top 5%
+    top 0%
     left 0%
     width 100%
     height 45%
+    background linear-gradient(to top, #eba65b 30%, #d99267 100%)
     border-radius 25px
 
 .card-st0
@@ -374,18 +326,14 @@ p.text-box
     stroke-miterlimit 10
 
 .card-story
-    font-family sans-serif
     position absolute
-    top 0%
+    top 45%
     left 0%
     height 55%
     width 100%
+    background linear-gradient(to bottom, #eba65b 0%, #d99267 40%)
     z-index 30
-    margin-top 50px
-    border-radius 10px
-    &.card-story-pos
-      top 0%
-      left 0%
+    border-radius 0px 0px 25px 25px
 
 .card-info
     position absolute
@@ -458,11 +406,9 @@ p.card-p
     animation fadeIn 0.3s ease-out
     opacity 1
 
-.card-pane
-  background-color: #dcdcdc
 
 #cardbox
-  height: 350px
+  height: 650px
 
 @keyframes fadeIn {
     0% {

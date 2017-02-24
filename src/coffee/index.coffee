@@ -1,6 +1,7 @@
 ((() ->
 
   require './gol.coffee'
+  require './nav.coffee'
 
   rand = (from, to) -> (Math.random() * (to-from) + from)
   cutFloat = (val, cap) -> parseInt(val*cap)/cap
@@ -59,7 +60,7 @@
     #($ '.card-container').each () ->
     #  el = ($ this)
     #  addParallaxy el, -Math.random()*30-10, Math.random()*30+10, true
-
+    ###
     (GitHubCalendar ".calendar", "isis97", {
       summary_text: false
       global_stats: false
@@ -75,6 +76,7 @@
       svg.appendTo ($ "#calendar_ribbon")
       cal.remove()
       svg.attr('width', 900).attr('height', 104)
+    ###
 
     scrollTo(0,0)
     ###window.test = () ->

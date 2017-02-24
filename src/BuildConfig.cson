@@ -10,12 +10,10 @@
     "css/font-awesome"
     "css/style"
     "css/typed"
-    "css/github-calendar"
   ]
   linkedJS: [
     "js/jquery"
     "js/typed.min"
-    "js/github-calendar.min"
     "js/parallax.min"
     "js/index"
   ]
@@ -43,7 +41,7 @@
       ]
       icon: "assets/js.png"
       cols: ["#000000", "#FFF056", "#FFFF5A"]
-      link: "http://piotr.styczynski.ml/autocomplete-js/"
+      link: "http://styczynski.ml/autocomplete-js/"
     }
     {
       name: "Tic Tac Console"
@@ -82,6 +80,16 @@
       icon: "assets/codepen.png"
       cols: ["#000000", "#CCCCCC", "#EEEEEE"]
       link: "http://codepen.io/isis97/"
+    }
+    {
+      name: "My portfolio"
+      descr: "The protfolio webpage sources."
+      badges: [
+        "badge/license-MIT-blue.svg"
+      ]
+      icon: "assets/sts_logo.png"
+      cols: ["#000000", "#B5E61D", "#B5E61D"]
+      link: "https://github.com/isis97/isis97.github.io"
     }
   ]
 }
