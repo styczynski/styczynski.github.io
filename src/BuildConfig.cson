@@ -61,7 +61,7 @@
       ]
       icon: "assets/terminal.png"
       cols: ["#eee", "#000000", "#999999"]
-      link: "https://github.com/isis97/The-Socket"
+      link: "https://github.com/isis97/WACCGL"
     }
     {
       name: "The-Socket"
@@ -85,11 +85,23 @@
       name: "My portfolio"
       descr: "The protfolio webpage sources."
       badges: [
-        "badge/license-MIT-blue.svg"
+        "badge/license-MIT-blue.svg?style=flat-square"
+        "website-up-down-green-red/http/styczynski.ml.svg?style=flat-square"
       ]
       icon: "assets/sts_logo.png"
       cols: ["#000000", "#B5E61D", "#B5E61D"]
       link: "https://github.com/isis97/isis97.github.io"
+    }
+    {
+      name: "Polymorphic C++ variables"
+      descr: "Polymorphic variable implementation using C++11"
+      badges: [
+        "badge/license-MIT-blue.svg?style=flat-square"
+        "github/release/isis97/poly-var-cpp.svg?style=flat-square"
+      ]
+      icon: "assets/cog.png"
+      cols: ["#332722", "#f39c12", "#dddcdc"]
+      link: "https://github.com/isis97/poly-var-cpp"
     }
   ]
 }
