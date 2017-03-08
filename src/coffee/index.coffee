@@ -5,6 +5,56 @@
   require './gol.coffee'
   require './nav.coffee'
 
+  calcColDif = (from, to, perc) ->
+    perc = Math.min perc, 1
+    perc = Math.max perc, 0
+    return [
+      ((to[0]-from[0])*perc + from[0])
+      ((to[1]-from[1])*perc + from[1])
+      ((to[2]-from[2])*perc + from[2])
+    ]
+
+  colToRgbStr = (col) ->
+    "rgb(#{parseInt(col[0])}, #{parseInt(col[1])}, #{parseInt(col[2])})"
+
+  addScrollListener = (fn) ->
+    $(window).scroll () ->
+      fn(($ window).scrollTop(), ($ window).height())
+
+  addScrollListener (s, h) ->
+
+    el = ($ "h3.skills")
+    skillsText = ($ "p.text-box.skills")
+
+    body = $("body")
+    gamma = (body.prop "scrollHeight") - (($ window).height())
+    gamma = (body.scrollTop()-el.offset().top+($ window).height()) / ($ window).height()
+    gamma = Math.min (Math.max gamma, 0), 1
+    console.log gamma
+
+    rgbFrom = [220, 220, 220]
+    rgbTo = [52, 73, 94]
+    col = calcColDif rgbFrom, rgbTo, gamma
+    el.css 'color', (colToRgbStr col)
+    skillsText.css 'color', (colToRgbStr col)
+    skillsText.css 'left', "#{parseInt(gamma*150)}px"
+
+  addScrollListener (s, h) ->
+    el = ($ ".content.first > h2")
+    arr = ($ ".content.first .arrow")
+    gamma = (s/h)*2
+    rgbFromBg = [31, 141, 214]
+    rgbToBg = [220, 220, 220]
+    rgbFromFg = [255, 255, 255]
+    rgbToFg = [52, 73, 94]
+    colBg = calcColDif rgbFromBg, rgbToBg, gamma
+    colFg = calcColDif rgbFromFg, rgbToFg, gamma
+    el.css 'color', (colToRgbStr colFg)
+    el.css 'background-color', (colToRgbStr colBg)
+    arr.css 'border-top-color', (colToRgbStr colFg)
+
+
+
   rand = (from, to) -> (Math.random() * (to-from) + from)
   cutFloat = (val, cap) -> parseInt(val*cap)/cap
   randAlpha = (from, to) ->
@@ -29,6 +79,10 @@
       if not preserveInitialOffset
         itop = 0
         ileft = 0
+      ($ window).scroll () ->
+        sx = 0
+        sy = 0
+        elem.offset {top: sx*(to-from)+from+itop, left: sy*(to-from)+from+ileft}
       ($ window).mousemove (e) ->
         sx = Math.max(Math.min(1, event.pageX/(w-bnd_w)), 0)
         sy = Math.max(Math.min(1, event.pageY/(h-bnd_h)), 0)
@@ -80,7 +134,18 @@
       svg.attr('width', 900).attr('height', 104)
     ###
 
-    scrollTo(0,0)
+    #scrollTo(0,0)
+    window.loaderIncr(10, "Index script fully-ready loaded.")
+    checkfCounter = 0
+    checkf = () ->
+      ++checkfCounter
+      siz = $("*").length
+      if (siz>40000) || (checkfCounter>1)
+        window.loaderAddReadyWrappers()
+      else
+        console.log "wait"
+        setTimeout checkf, 500
+    setTimeout checkf, 500
     ###window.test = () ->
       ($ ".logo").children().each (e) ->
         genTextShadow =  []
@@ -90,5 +155,7 @@
         ($ this).css
           "text-shadow": genTextShadow###
   )
+
+  window.loaderIncr(0, "Index script loaded.")
 
 )())

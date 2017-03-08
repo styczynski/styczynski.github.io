@@ -1,12 +1,93 @@
 html, body
   max-width 100%
   overflow-x hidden
+  background-color white
+
+.overflow-hidden
+  height 100%
+  margin 0
+  overflow hidden
 
 body
   max-width 100%
   font-size 14px
   font-family 'Comfortaa' cursive
   background-color	#000000
+
+.webpage-content
+  opacity 0
+
+.webpage-loader
+  position absolute
+  left 0px
+  top 0px
+  width 100%
+  height 100%
+  background-color white
+
+.loader
+  position absolute
+  left 25%
+  top 40%
+  width 50%
+  height 20%
+  margin auto
+
+#loader-figure
+  width 100%
+  height 100%
+  position absolute
+
+.loader-box-outside
+  width 100px
+  height 100px
+  background-color white
+  margin auto
+  display block
+  border 4px solid rgb(31, 141, 214)
+  animation anim-loader-box-outside 5.0s infinite ease
+
+.loader-box-inside
+  width 25%
+  height 25%
+  background-color rgb(31, 141, 214)
+  animation anim-loader-box-inside 2.5s infinite ease
+
+@keyframes anim-loader-box-outside {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(180deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes anim-loader-box-inside {
+    0% {
+      transform: translate(25%, 25%)
+    }
+
+    25% {
+      transform: translate(25%, 275%)
+    }
+
+    50% {
+      transform: translate(275%, 275%)
+    }
+
+    75% {
+      transform: translate(275%, 25%)
+    }
+
+    100% {
+      transform: translate(25%, 25%)
+    }
+}
 
 .navbar
   position fixed
@@ -204,9 +285,18 @@ a
   z-index 2
   background white
 
+p.text-box.skills
+  position relative
+  left 0px
+
 .content.first
   width 100%
   padding 0
+  & .arrow
+    border-top-color white
+  & > h2
+    background-color #1f8dd6
+    color white
   & > .conent-body
     margin 2em
 
@@ -257,7 +347,7 @@ a
   border-left 20px solid transparent
   border-right 20px solid transparent
   border-top 20px solid #1f8dd6
-  animation bounce 0.5s linear 1
+  animation bounce 1.5s infinite ease
 
 .ribbon
   padding 0px

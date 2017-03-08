@@ -11,8 +11,11 @@
     "css/style"
     "css/typed"
   ]
-  linkedJS: [
+  linkedPreloadedJS: [
     "js/jquery"
+    "js/preload"
+  ]
+  linkedJS: [
     "js/typed.min"
     "js/parallax.min"
     "js/index"
