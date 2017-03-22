@@ -5,6 +5,12 @@ opener = require 'opener'
 
 module.exports = (grunt) ->
 
+  grunt.log.header = () ->
+  require('logfile-grunt')(grunt, {
+    filePath: './logs/portfolio.log'
+    clearLogFile: true
+  })
+
   # Current tasks info
   isHelpModeActive = false
   for t in grunt.cli.tasks
@@ -99,6 +105,7 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks 'grunt-contrib-uglify'
     grunt.loadNpmTasks 'grunt-contrib-copy'
     grunt.loadNpmTasks 'grunt-contrib-clean'
+    grunt.loadNpmTasks 'grunt-assets-inline'
 
   grunt.registerTask 'default', [
     'copy:build'
@@ -130,10 +137,10 @@ module.exports = (grunt) ->
     'browserify:release_standalone'
     'copy:release'
     'stylus:release'
-    'cssmin:release'
+    'cssmin:release_standalone'
     'concat:release'
     'uglify:release_standalone'
-    'inline:release_standalone'
+    'assets_inline:release_standalone'
     'htmlmin:release_standalone'
     'copy:release_finish'
     'show_build_stats_standalone'

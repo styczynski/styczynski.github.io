@@ -36,7 +36,7 @@ module.exports = (grunt, config, buildTimeConfig, buildTimeConfigStandalone) ->
             expand: true
           }
           {
-            cwd: './src/assets/'
+            cwd: './assets/'
             src: '**/*'
             dest: './build/assets/'
             expand: true
@@ -279,6 +279,17 @@ module.exports = (grunt, config, buildTimeConfig, buildTimeConfigStandalone) ->
           }]
 
     cssmin:
+      release_standalone:
+        options: {
+          keepSpecialComments: 0
+        }
+        files: [{
+          expand: true
+          cwd: 'release/'
+          src: ['**/*.css', '**/*.min.css']
+          dest: 'release/'
+          ext: '.css'
+        }]
       release:
         files: [{
           expand: true
@@ -287,6 +298,20 @@ module.exports = (grunt, config, buildTimeConfig, buildTimeConfigStandalone) ->
           dest: 'release/'
           ext: '.css'
         }]
+
+    assets_inline:
+      release_standalone:
+        options:
+          minify: true
+          inlineImg: true
+          inlineSvg: true
+          inlineSvgBase64: true
+          inlineLinkTags: false
+          jsTags:
+            start: '<script type="text/javascript">'
+            end: '</script>'
+        files:
+           './release-standalone/index.html': './release/index.html'
 
     inline:
       release_standalone:

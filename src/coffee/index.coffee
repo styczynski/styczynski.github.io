@@ -1,6 +1,6 @@
 ((() ->
 
-  $("head").append("<link rel=\"icon\" href=\"https://raw.githubusercontent.com/isis97/isis97.github.io/master/src/assets/favicon.png\">")
+  #$("head").append("<link rel=\"icon\" href=\"https://raw.githubusercontent.com/isis97/isis97.github.io/master/assets/favicon.png\">")
 
   require './gol.coffee'
   require './nav.coffee'

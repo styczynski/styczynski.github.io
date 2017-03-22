@@ -3,18 +3,19 @@ html.overflow-hidden
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=600, initial-scale=1")
-    
+    link(rel="icon" href="assets/favicon.png")
+
     title #{pageTitle}
-    
+
   body.overflow-hidden
-  
+
     .webpage-loader
       .loader
         #loader-figure
           .loader-box-outside
             .loader-box-inside
 
-  
+
     span(style="display:none;")
       each jsPath in linkedPreloadedJS
         script(type="text/javascript" src="#{jsPath}.js")
@@ -24,7 +25,7 @@ html.overflow-hidden
         link(rel="stylesheet" href="#{cssPath}.css")
       each jsPath in linkedJS
         script(type="text/javascript" src="#{jsPath}.js")
-    
+
     .webpage-content
       .header
         .home-menu.pure-menu.pure-menu-horizontal.pure-menu-fixed
@@ -68,7 +69,6 @@ html.overflow-hidden
                   br
                   | I'm keen on programming and doing many things for fun.
                   br
-                  | 
                   br
                   | You can actually see few of them below:
           .card-pane
@@ -174,8 +174,8 @@ html.overflow-hidden
                 .boxy(style="background-color: rgba(255, 255, 255, 1);")
                 .boxy(style="background-color: rgba(255, 255, 255, 1);")
                 .boxy(style="background-color: rgba(255, 255, 255, 1);")
-                
-              
+
+
           .content(style="margin-top:-750px;")
             .pure-g
               .l-box.pure-u-1.pure-u-md-1-2.pure-u-lg-1-4(id="cardbox")
@@ -212,7 +212,7 @@ html.overflow-hidden
                   | send me an email! :)
           .content.ribbon
             .pure-g
-              
+
           .content
             h2.content-head.is-center#contactme Contact me!
             .pure-g

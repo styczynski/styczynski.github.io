@@ -4,3 +4,4 @@ release
 release-standalone
 build
 npm-debug.log
+logs
