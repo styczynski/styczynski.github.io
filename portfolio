@@ -4,6 +4,10 @@ then
   npm install .
   npm prune
 else
+  if [ ! -d "./node_modules/grunt-cli" ]; then
+    npm install .
+    npm prune
+  fi
   if [[ -z "${@// }" ]];
   then
     npm run help -s

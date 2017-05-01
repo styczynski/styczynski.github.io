@@ -44,13 +44,13 @@
     "uglifyify": "^3.0.2"
   },
   "scripts": {
-    "build": "./node_modules/grunt-cli/bin/grunt --gruntfile ./bin/build.coffee --base ./ build --stack",
-    "build-d": "./node_modules/grunt-cli/bin/grunt --gruntfile ./bin/build.coffee --base ./ build -d -v --stack",
-    "release": "./node_modules/grunt-cli/bin/grunt --gruntfile ./bin/build.coffee --base ./ release --stack",
-    "publish": "./node_modules/grunt-cli/bin/grunt --gruntfile ./bin/build.coffee --base ./ publish --stack",
-    "server": "./node_modules/grunt-cli/bin/grunt --gruntfile ./bin/build.coffee --base ./ server --stack",
-    "clean": "./node_modules/grunt-cli/bin/grunt --gruntfile ./bin/build.coffee --base ./ clean --stack",
-    "help": "./node_modules/grunt-cli/bin/grunt --gruntfile ./bin/build.coffee --base ./ help --no-color",
+    "build": "node ./node_modules/grunt-cli/bin/grunt --gruntfile ./bin/build.coffee --base ./ build --stack",
+    "build-d": "node ./node_modules/grunt-cli/bin/grunt --gruntfile ./bin/build.coffee --base ./ build -d -v --stack",
+    "release": "node ./node_modules/grunt-cli/bin/grunt --gruntfile ./bin/build.coffee --base ./ release --stack",
+    "publish": "node ./node_modules/grunt-cli/bin/grunt --gruntfile ./bin/build.coffee --base ./ publish --stack",
+    "server": "node ./node_modules/grunt-cli/bin/grunt --gruntfile ./bin/build.coffee --base ./ server --stack",
+    "clean": "node ./node_modules/grunt-cli/bin/grunt --gruntfile ./bin/build.coffee --base ./ clean --stack",
+    "help": "node ./node_modules/grunt-cli/bin/grunt --gruntfile ./bin/build.coffee --base ./ help --no-color",
     "show": "./node_modules/grunt-cli/bin/grunt --gruntfile ./bin/build.coffee --base ./ show --no-color",
     "send": "git add . & git commit -a -m \"Next release.\" & git push"
   },

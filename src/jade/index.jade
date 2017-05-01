@@ -3,7 +3,7 @@ html.overflow-hidden
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=600, initial-scale=1")
-    link(rel="icon" href="assets/favicon.png")
+    link(rel="icon" href="assets/images/favicon.png")
 
     title #{pageTitle}
 
@@ -52,6 +52,67 @@ html.overflow-hidden
               | Just hire one and say bye to all your infinite problems.
             p
               span.splash-subbutton.pure-button.pure-button-primary(id='hiremebutton') Hire me!
+        .header-links(style="#{headerLinks.cv}")
+          //headerLinkImg(512, 512, "cv.png", #{headerLinks.cv})
+          //headerLinkSvg(512, 512, "git.svg", "Capa_1", #{headerLinks.git})
+          //headerLinkImg(512, 512, "goldenline.png", #{headerLinks.goldenline})
+          each link in headerLinks
+            if link.submenu
+              .link
+                svg(viewBox="0 0 #{link.w} #{link.h}")
+                  filter(id="inverse")
+                    feColorMatrix(in="SourceGraphic" type="matrix" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0")
+                  filter(id="grayscale")
+                    feColorMatrix(type="saturate" values="0")
+                  filter(id="threshold" color-interpolation-filters="sRGB")
+                    feComponentTransfer
+                      feFuncR(type="discrete" tableValues="0 0.5 1")
+                      feFuncG(type="discrete" tableValues="0 0.5 1")
+                      feFuncB(type="discrete" tableValues="0 0.5 1")
+                  filter(id="blur")
+                    feGaussianBlur(in="SourceGraphic" stdDeviation="6")
+                  g(filter="url(#blur)")
+                    g(filter="url(#threshold)")
+                      g(filter="url(#inverse)")
+                        if link.image.endsWith(".svg")
+                          use(xlink:href="./assets/images/#{link.image}" filter="url(#grayscale)")
+                        else
+                          image(xlink:href="./assets/images/#{link.image}" width="#{link.w}" height="#{link.h}" filter="url(#grayscale)")
+                .submenu
+                  each sublink in link.submenu
+                    .sublink
+                      a.content(href="#{sublink.href}")
+                        img(src="./assets/images/#{sublink.image}")
+                      if sublink.descr
+                        span.text
+                          | #{sublink.descr}
+            else
+              a.link.clickable(href="#{link.href}")
+                svg(viewBox="0 0 #{link.w} #{link.h}")
+                  filter(id="inverse")
+                    feColorMatrix(in="SourceGraphic" type="matrix" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0")
+                  filter(id="grayscale")
+                    feColorMatrix(type="saturate" values="0")
+                  filter(id="threshold" color-interpolation-filters="sRGB")
+                    feComponentTransfer
+                      feFuncR(type="discrete" tableValues="0 0.5 1")
+                      feFuncG(type="discrete" tableValues="0 0.5 1")
+                      feFuncB(type="discrete" tableValues="0 0.5 1")
+                  filter(id="blur")
+                    feGaussianBlur(in="SourceGraphic" stdDeviation="6")
+                  g(filter="url(#blur)")
+                    g(filter="url(#threshold)")
+                      g(filter="url(#inverse)")
+                        if link.image.endsWith(".svg")
+                          use(xlink:href="./assets/images/#{link.image}" filter="url(#grayscale)")
+                        else
+                          image(xlink:href="./assets/images/#{link.image}" width="#{link.w}" height="#{link.h}" filter="url(#grayscale)")
+                .submenu
+                  span.descr
+                    | #{link.descr}
+                          
+          .link-indicator
+          
       .content-wrapper
         .content.first
           h2.content-head.first.is-center#hireMeBox(style="margin-top: 0;")
@@ -83,7 +144,7 @@ html.overflow-hidden
                   //-.card-image(style="background: linear-gradient(to bottom, #{card.cols[1]} 30%, #{card.cols[2]} 100%);")
                   .card-image(style="")
                     .card-city
-                      img.card-img-src(style='margin-top: 15%; margin-left: 20%; margin-right: 20%; height: 30%; width: 60%;', src="#{card.icon}")
+                      img.card-img-src(style='margin-top: 15%; margin-left: 20%; margin-right: 20%; height: 30%; width: 60%;', src="./assets/images/#{card.icon}")
                   //-.card-story(style="background: linear-gradient(to bottom, #{card.cols[2]} 30%, #{card.cols[1]} 100%); color: #{card.cols[0]};")
                   .card-story(class="card-story-pos" style="background-color: #{card.cols[1]}; color: #{card.cols[0]};")
                     .card-info(style="color: #{card.cols[0]};")
