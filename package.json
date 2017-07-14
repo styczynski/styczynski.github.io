@@ -4,12 +4,12 @@
   "description": "My portfolio static website.",
   "author": "Piotr Styczyński",
   "authorUser": {
-    "name": "isis97",
-    "email": "piotrsty1@op.pl"
+    "name": "styczynski",
+    "email": "piotrsty1@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/npm/npm.git"
+    "url": "https://github.com/styczynski/styczynski.github.io"
   },
   "dependencies": {},
   "devDependencies": {
