@@ -497,10 +497,11 @@ p.text-box
     transform rotateX(0deg) scale(0.7) translate(0, 50%)
     perspective 900px
     cursor pointer
+    border 2px rgba(127, 140, 141, 0.28) solid
 
     animation entry 0.5s linear 1
     & .card-story
-      height 55%
+      height 100%
       opacity 0
       animation fadeOut 0.3s ease-out
     & .card-info
@@ -508,26 +509,29 @@ p.text-box
       opacity 0
       animation fadeOut 0.3s ease-out
     & .card-image
-      height 100%
+      height 100
+      transition .5s all ease
     &:hover
       cursor default
-      height 60%
+      //height 60%
       & .card-img-src
         filter none
       & .card-image
         height 100%
-        border-radius 25px 25px 0px 0px
+        //border-radius 25px 25px 0px 0px
         transform scale(0.5) translateY(-180px) translateX(-110%)
+        border none
         z-index 9999
       & .card-story
-        height 80%
+        //height 80%
         animation fadeIn 0.5s ease-out
+        //transform: scale(0.7)
         opacity 1
       & .card-info
         max-height 900px
         animation fadeIn 0.5s ease-out
         opacity 1
-      transform rotate(0deg) scale(0.9) translateY(80px)
+      //transform translateY(80px)
       transition .5s all ease
       z-index 9999
 
@@ -537,7 +541,8 @@ p.text-box
     left 0%
     width 100%
     height 45%
-    border-radius 25px
+    //border-radius 25px
+    //border: 2px black solid
 
 .card-st0
     fill #a25a62
@@ -555,11 +560,11 @@ p.text-box
     position absolute
     top 0%
     left 0%
-    height 55%
+    height 100%
     width 100%
     z-index 30
-    margin-top 50px
-    border-radius 10px
+    //margin-top 18px
+    //border-radius 10px
     &.card-story-pos
       top 0%
       left 0%
@@ -637,6 +642,7 @@ p.card-p
 
 .card-pane
   background-color: #dcdcdc
+  height: 900px
 
 #cardbox
   height: 350px
