@@ -14,8 +14,15 @@ module.exports = (() ->
     navSections.sort (x, y) -> x.pos - y.pos
     len = navSections.length
     body = ($ 'body')
-    curS = body.scrollTop()
-    maxS = (body.prop "scrollHeight") - (($ window).height())
+    
+    #curS = body.scrollTop()
+    #maxS = (body.prop "scrollHeight") - (($ window).height())
+    
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+    scrollMax = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight )
+   
+    curS = scrollTop
+    maxS = scrollMax
     posn = -1
     posn_c = 0
     for i in [0..len-1] by 1
@@ -56,9 +63,12 @@ module.exports = (() ->
     nav = navpar.children()
     ($ window).scroll () ->
 
-      curS = body.scrollTop()
-      maxS = (body.prop "scrollHeight") - (($ window).height())
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+      scrollMax = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight )
 
+
+      curS = scrollTop
+      maxS = scrollMax
       navopacity = 1
       if curS > ($ window).height()+150
         navopacity = 1

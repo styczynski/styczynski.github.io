@@ -82,6 +82,47 @@
       link: "http://styczynski.ml/autocomplete-js/"
     }
     {
+      name: "Weatherly"
+      descr: "Nice looking weather fetcher written in Java"
+      badges: [
+        
+      ]
+      icon: "weatherly32.png"
+      cols: ["#eee", "#1683DC", "#3264FA"]
+      link: "https://github.com/styczynski/weatherly"
+    }
+    {
+      name: "UTEST"
+      descr: "Universal bash testing script. Allows you to test any executable program or command with file input. Checks for memory leaks and measures program efficency in simplest ways."
+      badges: [
+        "github/release/styczynski/bash-universal-tester.svg"
+      ]
+      icon: "terminal.png"
+      cols: ["#eee", "#000000", "#999999"]
+      link: "https://github.com/styczynski/bash-universal-tester"
+    }
+    {
+      name: "IPP-POLY"
+      descr: "This project is based on exercise we had to do on Warsaw University, Poland on the Individual Programistic Project subject. We had to implement polynomial calculator."
+      badges: [
+        "travis/styczynski/ipp-poly.svg?style=flat-square",
+        "github/tag/styczynski/ipp-poly.svg?style=flat-square"
+      ]
+      icon: "terminal.png"
+      cols: ["#eee", "#000000", "#999999"]
+      link: "https://github.com/styczynski/ipp-poly"
+    }
+    {
+      name: "avr-weather-esp8266"
+      descr: "Weather fetching through wifi with LCD1602 + Atmega32 + ESP8266 "
+      badges: [
+        
+      ]
+      icon: "terminal.png"
+      cols: ["#eee", "#000000", "#999999"]
+      link: "https://github.com/styczynski/avr-weather-esp8266"
+    }
+    {
       name: "Tic Tac Console"
       descr: "The game is n-dimensional classic tic-tac-toe game inside Windows terminal. Utilizes basic terminal hid-input, ascii dialog boxes and even more strange stuff!"
       badges: [
