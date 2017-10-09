@@ -41,8 +41,8 @@
     rgbFrom = [220, 220, 220]
     rgbTo = [52, 73, 94]
     col = calcColDif rgbFrom, rgbTo, gamma
-    el.css 'color', (colToRgbStr col)
-    skillsText.css 'color', (colToRgbStr col)
+    #el.css 'color', (colToRgbStr col)
+    #skillsText.css 'color', (colToRgbStr col)
     skillsText.css 'left', "#{parseInt(gamma*150)}px"
 
   addScrollListener (s, h) ->

@@ -642,6 +642,7 @@ p.card-p
 
 .card-pane
   background-color: #dcdcdc
+  height: 900px
 
 #cardbox
   height: 350px
