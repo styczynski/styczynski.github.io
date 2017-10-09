@@ -138,9 +138,9 @@ html.overflow-hidden
               -var lshift = 0;
               -var tshift = 0;
               each card in cards
-                - ++lshift; if(lshift>3) {lshift=1;++tshift;};
+                - ++lshift; if(lshift>5) {lshift=1;++tshift;};
                 //-.card-container(class="card-z-#{tshift}", style="left: #{(lshift-2)*75}%; top: #{tshift*40}%; background: linear-gradient(to bottom, #{card.cols[1]} 30%, #{card.cols[2]} 100%);")
-                .card-container(class="card-z-#{tshift}", style="left: #{(lshift-2)*75}%; top: #{tshift*30-20}%;")
+                .card-container(class="card-z-#{tshift}", style="left: #{(lshift-3)*75}%; top: #{tshift*38-20}%;")
                   //-.card-image(style="background: linear-gradient(to bottom, #{card.cols[1]} 30%, #{card.cols[2]} 100%);")
                   .card-image(style="")
                     .card-city

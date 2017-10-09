@@ -27,9 +27,15 @@
     skillsText = ($ "p.text-box.skills")
 
     body = $("body")
-    gamma = (body.prop "scrollHeight") - (($ window).height())
-    gamma = (body.scrollTop()-el.offset().top+($ window).height()) / ($ window).height()
-    gamma = Math.min (Math.max gamma, 0), 1
+
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+    scrollMax = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight )
+
+    #gamma = (scrollTop-el.offset().top+($ window).height()) / ($ window).height()
+
+    gamma = (scrollTop)/scrollMax
+
+    #gamma = Math.min (Math.max gamma, 0), 1
     console.log gamma
 
     rgbFrom = [220, 220, 220]
