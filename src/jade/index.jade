@@ -140,11 +140,14 @@ html.overflow-hidden
               each card in cards
                 - ++lshift; if(lshift>5) {lshift=1;++tshift;};
                 //-.card-container(class="card-z-#{tshift}", style="left: #{(lshift-2)*75}%; top: #{tshift*40}%; background: linear-gradient(to bottom, #{card.cols[1]} 30%, #{card.cols[2]} 100%);")
-                .card-container(class="card-z-#{tshift}", style="left: #{(lshift-3)*75}%; top: #{tshift*38-20}%;")
+                .card-container(class="card-z-#{tshift}", style="left: #{(lshift-3)*75}%; top: #{tshift*38-20}%;", data-logo-color="#{card.iconColor || card.cols[0]}")
                   //-.card-image(style="background: linear-gradient(to bottom, #{card.cols[1]} 30%, #{card.cols[2]} 100%);")
                   .card-image(style="")
                     .card-city
-                      img.card-img-src(style='margin-top: 15%; margin-left: 20%; margin-right: 20%; height: 30%; width: 60%;', src="./assets/images/#{card.icon}")
+                      if card.icon.startsWith("fa")
+                        i(class="#{card.icon} card-font-icon" aria-hidden="true" style='margin-top: 15%; margin-left: 20%; margin-right: 20%; height: 30%; width: 60%;')
+                      else
+                        img.card-img-src(style='margin-top: 15%; margin-left: 20%; margin-right: 20%; height: 30%; width: 60%;', src="./assets/images/#{card.icon}")
                   //-.card-story(style="background: linear-gradient(to bottom, #{card.cols[2]} 30%, #{card.cols[1]} 100%); color: #{card.cols[0]};")
                   .card-story(class="card-story-pos" style="background-color: #{card.cols[1]}; color: #{card.cols[0]};")
                     .card-info(style="color: #{card.cols[0]};")
@@ -167,6 +170,7 @@ html.overflow-hidden
             .pure-g
               .l-box.pure-u-1.pure-u-md-1-2.pure-u-lg-1-4(id="cardbox")
                 span.navsection Skills
+                img.skills(src="./assets/images/proc.png")
                 h3.skills.content-subhead(style="color:#333333")
                   | Skills
                 p.text-box.skills

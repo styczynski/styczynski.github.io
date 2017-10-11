@@ -99,6 +99,13 @@
 
   ($ document).ready (() ->
 
+    ($ ".card-container").hover (() ->
+      logoColor = $(this).attr('data-logo-color')
+      $(this).find('.card-font-icon').css('color', logoColor)
+    ), (() ->
+      $(this).find('.card-font-icon').css('color', 'inherit')
+    )
+  
     ($ "#splash-anim").typed
       strings: ["int main(void) { main(); }", "++--[+]", "while [ 1 ]; done"]
       showCursor: true

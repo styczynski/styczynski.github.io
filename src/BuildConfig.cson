@@ -97,8 +97,9 @@
       badges: [
         "github/release/styczynski/bash-universal-tester.svg"
       ]
-      icon: "terminal.png"
-      cols: ["#eee", "#000000", "#999999"]
+      icon: "fa fa-check-square-o"
+      iconColor: "#5ae838"
+      cols: ["#96ff7c", "#21a700", "#999999"]
       link: "https://github.com/styczynski/bash-universal-tester"
     }
     {
@@ -108,7 +109,7 @@
         "travis/styczynski/ipp-poly.svg?style=flat-square",
         "github/tag/styczynski/ipp-poly.svg?style=flat-square"
       ]
-      icon: "terminal.png"
+      icon: "fa fa-plus-square"
       cols: ["#eee", "#000000", "#999999"]
       link: "https://github.com/styczynski/ipp-poly"
     }
@@ -128,8 +129,8 @@
       badges: [
         "badge/platform-windows-blue.svg?style=flat-square&logoWidth=20&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA%2FwD%2FAP%2BgvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJTUUH4AgSEisSipueyAAAAHBJREFUSMdjZKA2WPv%2BPzKXkSxDiuf%2FZ7AKIEopbgsW3v%2FPwCOA4AcLMqK7jhjAQo4mUgATA43BqAWjFlADiCvQ1HjsuXNJIwPD%2BgmMtLMAGyCzqBhNRaMWDAELWBiCBRmJrcDJy2hUaj1Q3wIiLQcAUjQgoD1kMJYAAAAASUVORK5CYII%3D"
       ]
-      icon: "terminal.png"
-      cols: ["#eee", "#000000", "#999999"]
+      icon: "fa fa-times"
+      cols: ["#000000", "#9c9c9c", "#ffffff"]
       link: "https://github.com/styczynski/TicTacConsole"
     }
     {

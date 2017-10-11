@@ -375,6 +375,11 @@ a
 p.text-box.skills
   position relative
   left 0px
+  
+img.skills
+  width 200px
+  float right
+  margin-right 15%
 
 .content.first
   width 100%
@@ -443,11 +448,14 @@ p.text-box.skills
   height 50px
 
 .card-wrapper
-    margin auto
-    width 300px
-    height 700px
-    perspective 900px
+  margin auto
+  width 300px
+  height 700px
+  perspective 900px
 
+.card-font-icon
+  font-size 14em
+  
 .card-z-0
   z-index 0
 

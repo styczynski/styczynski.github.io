@@ -41,6 +41,12 @@ module.exports = (grunt, config, buildTimeConfig, buildTimeConfigStandalone) ->
             dest: './build/assets/'
             expand: true
           }
+          {
+            cwd: './fonts/'
+            src: '**/*'
+            dest: './build/fonts/'
+            expand: true
+          }
         ]
       release:
         files: [
