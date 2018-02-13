@@ -4,10 +4,10 @@
 
 [![Platform - Node][badge support node]][link isis97]
 
-[![Up status](https://img.shields.io/website-up-down-green-red/http/styczynski.ml.svg?style=flat-square "styczynski.ml status")][link isis97]
+[![Up status](https://img.shields.io/website-up-down-green-red/http/styczynski.in.svg?style=flat-square "styczynski.in status")][link isis97]
 
 
-Visit my portfolio here: [http://styczynski.ml](http://styczynski.ml)
+Visit my portfolio here: [http://styczynski.in](http://styczynski.in)
 
 # Build
 
@@ -23,4 +23,4 @@ To build the page use clone the repository, go to the directory where it has bee
 
 [badge support node]: https://img.shields.io/badge/platform-node-green.svg?style=flat-square&logoWidth=20&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAC8AAAAyCAYAAADMb4LpAAAABmJLR0QA%2FwD%2FAP%2BgvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4AgTDxIs6TxZnwAAATRJREFUaN7t2q0OwjAQB%2FC2FoPEgMMgMaAxPAcJCYo3ICEzvAGG8A4ERULIJAZDCDMLFkGCw3MoBITB%2BnHrFv59gO1319st6VUSkSjqUlwPDkJFQahYMyNdZz4JPO7cZW7xabPsMgjrsomva63yCEJFm9OEvGfetqZtd8EIv4iGdLhMndWuaRDaeK4OMmgdRaXUkCx47rZnsgs%2F8VmhTYJI7DbRZUm%2B4M%2BkreIRaWfeJ1pnF17weUP%2FCkKJAi%2FggQceeOCBBx544IEHHnjggQce%2BH%2FBc4xeXK1PtsSD1rycnn1LaKFPiVOdz59ve5rvmpmgu%2FWZaFf7qcpXazLCvQu635zRTMp1EJnNpFwGYdvdlK%2BXu2jLhZ6AZ3b3oNfcilq57fQnKDmurLwHwPXnlrhv42k9AGprq6tU7LX3AAAAAElFTkSuQmCC
 
-[link isis97]: http://styczynski.ml
+[link isis97]: http://styczynski.in
