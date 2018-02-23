@@ -58,7 +58,7 @@
   cards: [
     {
       name: "atom-terminal-panel"
-      descr: "Plugin for ATOM Editor. Advanced terminal interface for Atom editor"
+      descr: "Plugin for ATOM Editor. Advanced terminal interface for Atom editor."
       badges: [
         "apm/v/atom-terminal-panel.svg?style=flat-square"
         "apm/dm/atom-terminal-panel.svg?style=flat-square"
@@ -83,7 +83,7 @@
     }
     {
       name: "Weatherly"
-      descr: "Nice looking weather fetcher written in Java"
+      descr: "Nice looking weather fetcher written in Java."
       badges: [
         
       ]
@@ -104,7 +104,7 @@
     }
     {
       name: "IPP-POLY"
-      descr: "This project is based on exercise we had to do on Warsaw University, Poland on the Individual Programistic Project subject. We had to implement polynomial calculator."
+      descr: "A project based on exercise done in Warsaw University, Poland during Individual Programistic Project class - a polynomial calculator."
       badges: [
         "travis/styczynski/ipp-poly.svg?style=flat-square",
         "github/tag/styczynski/ipp-poly.svg?style=flat-square"
@@ -115,7 +115,7 @@
     }
     {
       name: "avr-weather-esp8266"
-      descr: "Weather fetching through wifi with LCD1602 + Atmega32 + ESP8266 "
+      descr: "Weather fetching through wifi with LCD1602 + Atmega32 + ESP8266."
       badges: [
         
       ]
@@ -125,7 +125,7 @@
     }
     {
       name: "Tic Tac Console"
-      descr: "The game is n-dimensional classic tic-tac-toe game inside Windows terminal. Utilizes basic terminal hid-input, ascii dialog boxes and even more strange stuff!"
+      descr: "N-dimensional classic tic-tac-toe game inside Windows terminal. It utilizes basic terminal hid-input, ascii dialog boxes and even more strange stuff!"
       badges: [
         "badge/platform-windows-blue.svg?style=flat-square&logoWidth=20&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA%2FwD%2FAP%2BgvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJTUUH4AgSEisSipueyAAAAHBJREFUSMdjZKA2WPv%2BPzKXkSxDiuf%2FZ7AKIEopbgsW3v%2FPwCOA4AcLMqK7jhjAQo4mUgATA43BqAWjFlADiCvQ1HjsuXNJIwPD%2BgmMtLMAGyCzqBhNRaMWDAELWBiCBRmJrcDJy2hUaj1Q3wIiLQcAUjQgoD1kMJYAAAAASUVORK5CYII%3D"
       ]
@@ -164,7 +164,7 @@
     }
     {
       name: "My portfolio"
-      descr: "The protfolio webpage sources."
+      descr: "The portfolio webpage source code."
       badges: [
         "badge/license-MIT-blue.svg?style=flat-square"
         "website-up-down-green-red/http/styczynski.ml.svg?style=flat-square"
@@ -175,7 +175,7 @@
     }
     {
       name: "Polymorphic C++ variables"
-      descr: "Polymorphic variable implementation using C++11"
+      descr: "Polymorphic variable implementation using C++11."
       badges: [
         "badge/license-MIT-blue.svg?style=flat-square"
         "github/release/styczynski/poly-var-cpp.svg?style=flat-square"
