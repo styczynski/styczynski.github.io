@@ -25,9 +25,15 @@ const ImageButtonWrapper = styled.a`
     cursor: pointer;
     border-bottom: 0.3vw solid transparent;
     padding-left: 0.2vw;
+    z-index: 9999999999;
     
     &:hover {
         border-bottom: 0.3vw solid ${(props) => props.theme.colors.lightAccent};
+    }
+    
+    @media (max-width: 500px) {
+      width: 20vw;
+      margin-right: 2vw;
     }
 `;
 
@@ -49,6 +55,10 @@ const PhotoWrapper = styled.div`
     width: 20vw;
     height: 57vh;
     margin-top: 5vh;
+    
+    @media (max-width: 500px) {
+      width: 43vw;
+    }
 `;
 
 const LinksWrapper = styled.div`
@@ -57,17 +67,27 @@ const LinksWrapper = styled.div`
     left: 5vw;
 `;
 
-export interface RocketWrapperProps {
-    x: number;
-    y: number;
-}
-
-const RocketWrapper = styled.div<RocketWrapperProps>`
+const RocketWrapper = styled.div`
     position: absolute;
     top: 30vh;
     left: 13vw;
     transform: rotateZ(45deg);
     height: 10vw;
+    z-index: 99999999;
+    
+    @media (max-width: 768px) {
+      left: 20vw;
+    }
+    
+    @media (max-width: 500px) {
+      width: 16vw;
+    }
+    
+    @media (max-width: 500px) and (min-height: 350px) {
+      width: 30vw;
+      top: 55vw;
+      left: 23vw;
+    }
 `;
 
 const RocketTextWrapper = styled.div`
@@ -81,14 +101,26 @@ const RocketTextWrapper = styled.div`
     width: 58vw;
     color: ${(props) => props.theme.colors.lightAccent};
     font-family: ${(props) => props.theme.primaryFont};
+    
+    @media (max-width: 500px) {
+      width: 49vw;
+    }
 `;
 
 const RocketTextTitle = styled.div`
    font-size: ${(props) => props.theme.fontSize.XXXL};
+   
+   @media (max-width: 500px) {
+     font-size: 8vw;
+   }
 `;
 
 const RocketTextSubtitle = styled.div`
    font-size: ${(props) => props.theme.fontSize.L};
+   
+   @media (max-width: 500px) {
+     font-size: 5vw;
+   }
 `;
 
 const RocketPlanetWrapper1 = styled.div`
@@ -96,6 +128,18 @@ const RocketPlanetWrapper1 = styled.div`
     top: 30vh;
     left: 20vw;
     height: 10vw;
+    
+    @media (max-width: 500px) {
+       top: 52vh;
+       left: 20vw;
+       width: 22vw;
+    }
+    
+    @media (max-width: 500px) and (min-height: 350px) {
+      top: 63vh;
+      left: -4vw;
+      width: 55vw;
+    }
 `;
 
 const RocketPlanetWrapper2 = styled.div`
@@ -103,6 +147,18 @@ const RocketPlanetWrapper2 = styled.div`
     top: 15vh;
     left: 5vw;
     height: 40vw;
+    
+    @media (max-width: 500px) {
+      top: 6vh;
+      left: 5vw;
+      width: 27vw;
+    }
+    
+    @media (max-width: 500px) and (min-height: 350px) {
+      top: 15vh;
+      left: 2vw;
+      width: 49vw;
+    }
 `;
 
 const RocketPlanetWrapper3 = styled.div`
@@ -110,6 +166,18 @@ const RocketPlanetWrapper3 = styled.div`
     top: -18vh;
     left: 14vw;
     width: 31vw;
+    
+    @media (max-width: 500px) {
+      top: -4vh;
+      left: 0vw;
+      width: 20vw;
+    }
+    
+    @media (max-width: 500px) and (min-height: 350px) {
+      top: -2vw;
+      left: 0vw;
+      width: 41vw;
+    }
 `;
 
 const RocketPlanetWrapper4 = styled.div`
@@ -117,11 +185,17 @@ const RocketPlanetWrapper4 = styled.div`
     top: 32vh;
     left: 19vw;
     width: 36vw;
+    
+    @media (max-width: 1024px) {
+      top: 50vh;
+    }
+    
+    @media (max-width: 768px) {
+      display: none;
+    }
 `;
 
 interface HomePanelState {
-    rocketX: number;
-    rocketY: number;
 };
 
 class HomePanel extends React.Component<HomePanelProps, HomePanelState> {
@@ -131,37 +205,7 @@ class HomePanel extends React.Component<HomePanelProps, HomePanelState> {
     constructor(props) {
        super(props);
 
-       this.state = {
-           rocketX: 0,
-           rocketY: 0
-       };
-       
-       this.timer = null;
-       this.handleTick = this.handleTick.bind(this);
-    }
-    
-    componentDidMount() {
-        if(this.timer === null) {
-            this.timer = setInterval(this.handleTick, 100);
-        }
-    }
-    
-    componentWillUnmount() {
-        if(this.timer !== null) {
-            clearInterval(this.timer);
-            this.timer = null;
-        }
-    }
-    
-    handleTick() {
-        return;
-        setTimeout(() => {
-            this.setState({
-                rocketX: (this.state.rocketX + 1) % 100,
-                rocketY: (this.state.rocketY + 1) % 100
-            });
-            console.log(this.state);
-        }, 0);
+       this.state = {};
     }
     
     /*
@@ -174,7 +218,7 @@ class HomePanel extends React.Component<HomePanelProps, HomePanelState> {
         return (
             <div>
                 <HeaderWrapper>
-                    <RocketWrapper x={this.state.rocketX-50} y={this.state.rocketY-50}>
+                    <RocketWrapper>
                         <Logo type='Rocket' />
                     </RocketWrapper>
                     <RocketPlanetWrapper1>
