@@ -1,4 +1,4 @@
-# My portfolio
+# :telescope: My portfolio
 
 [![Platform - Node][badge support node]][link isis97]
 
@@ -7,12 +7,12 @@
 
 Visit my portfolio here: [http://styczynski.in](http://styczynski.in)
 
-## Installation
+## :rocket: Installation
 
 1. Clone/download repo
 2. `yarn install` (or `npm install` for npm)
 
-## Usage
+## 📡👽 Usage
 
 **Development**
 
