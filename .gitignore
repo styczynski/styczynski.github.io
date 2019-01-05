@@ -1,7 +1,7 @@
-node_modules
-.grunt
-release
-release-standalone
-build
-npm-debug.log
-logs
+.idea/
+dist/
+node_modules/
+src/**/*.jsx
+tests/__coverage__/
+tests/**/*.jsx
+docs/
