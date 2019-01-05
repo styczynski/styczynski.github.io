@@ -60,7 +60,7 @@ Our work (MessageTube was made by my friends and me) got 3rd prize on Facebook W
   'messagetube_more': `
 I love hackatons, because you can see all the people with their fantastic energy, motivation and lots of love for programming.
 It's so cool, I love that!
-`
+`,
   'atom_terminal_panel_description': `
 Plugin for ATOM Editor. Advanced terminal interface for Atom editor
 `,
