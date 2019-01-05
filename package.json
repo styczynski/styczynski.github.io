@@ -81,6 +81,7 @@
     "react-markdown": "^4.0.4",
     "react-muuri": "^0.2.0",
     "react-polyglot": "^0.2.6",
+    "react-popover": "^0.5.10",
     "react-router-dom": "^4.3.1",
     "react-search-input": "^0.11.3",
     "styled-components": "^4.1.3"

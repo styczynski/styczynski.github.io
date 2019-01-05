@@ -7,6 +7,7 @@ import TextInput from 'components/TextInput';
 import Button from 'components/Button';
 import Description from 'components/Description';
 import DescriptionBlock from 'components/DescriptionBlock';
+import DescriptionSection from 'components/DescriptionSection';
 import Text from 'components/Text';
 import Logo from 'components/Logo';
 import Card from 'components/Card';
@@ -256,6 +257,12 @@ class HomePanel extends React.Component<HomePanelProps, HomePanelState> {
                         <ImageButtonWrapper href='./cv/PIOTR_STYCZYNSKI_CV.pdf'>
                              <Logo type={require('img/cv.png')} />
                         </ImageButtonWrapper>
+                        <ImageButtonWrapper href='https://stackoverflow.com/users/8758309/piotr-styczy%C5%84ski?tab=profile'>
+                             <Logo type={require('img/stackoverflow.png')} />
+                        </ImageButtonWrapper>
+                        <ImageButtonWrapper href='https://gitlab.com/styczynski'>
+                             <Logo type={require('img/gitlab.png')} />
+                        </ImageButtonWrapper>
                     </LinksWrapper>
                 </HeaderWrapper>
                 <DescriptionBlock
@@ -267,116 +274,127 @@ class HomePanel extends React.Component<HomePanelProps, HomePanelState> {
                 >
                     <Logo type='Planet4' />
                 </DescriptionBlock>
-                <DescriptionBlock
+                <DescriptionSection
+                  block
                   fullBar
-                  size='L'
-                  text={<Text translate>experiments_description</Text>}
-                  content={
-                      <div></div>
-                  }
+                  text='experiments_description'
+                  logo='Planet1'
                 >
-                    <Logo type='Planet1' />
-                </DescriptionBlock>
-                <Description
-                  size='L'
-                  text={<Text translate>open_source_description</Text>}
-                  content={
-                      <div>
-                          <Card
-                              title='Atom Terminal Panel'
-                              link='https://github.com/styczynski/atom-terminal-panel'
-                              badges={[
+                    {[
+                        {
+                            title: 'PL in ML Conference Webpage',
+                            link: 'http://plinml.mimuw.edu.pl',
+                            description: 'pl_in_ml_description',
+                            more: 'pl_in_ml_more'
+                        },
+                        {
+                            title: 'MessageTube',
+                            link: 'http://messagetu.be/',
+                            description: 'messagetube_description',
+                            more: 'messagetube_more'
+                        }
+                    ]}
+                </DescriptionSection>
+                <DescriptionSection
+                    logo='Planet6'
+                    text='open_source_description'
+                >
+                    {[
+                        {
+                            title: 'Atom Terminal Panel',
+                            link: 'https://github.com/styczynski/atom-terminal-panel',
+                            badges: [
                                 'apm/v/atom-terminal-panel.svg?style=flat-square',
                                 'apm/dm/atom-terminal-panel.svg?style=flat-square',
                                 'apm/l/atom-terminal-panel.svg?style=flat-square'
-                              ]}
-                              description={<Text translate>atom_terminal_panel_description</Text>}
-                          />
-                          <Card
-                              title='Autocomplete JS'
-                              link='http://styczynski.in/autocomplete-js/'
-                              badges={[
+                            ],
+                            description: 'atom_terminal_panel_description',
+                            more: 'atom_terminal_panel_more'
+                        },
+                        {
+                            title: 'Autocomplete JS',
+                            link: 'http://styczynski.in/autocomplete-js/',
+                            badges: [
                                 'badge/platform-node-green.svg?style=flat-square&logoWidth=20&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAC8AAAAyCAYAAADMb4LpAAAABmJLR0QA%2FwD%2FAP%2BgvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4AgTDxIs6TxZnwAAATRJREFUaN7t2q0OwjAQB%2FC2FoPEgMMgMaAxPAcJCYo3ICEzvAGG8A4ERULIJAZDCDMLFkGCw3MoBITB%2BnHrFv59gO1319st6VUSkSjqUlwPDkJFQahYMyNdZz4JPO7cZW7xabPsMgjrsomva63yCEJFm9OEvGfetqZtd8EIv4iGdLhMndWuaRDaeK4OMmgdRaXUkCx47rZnsgs%2F8VmhTYJI7DbRZUm%2B4M%2BkreIRaWfeJ1pnF17weUP%2FCkKJAi%2FggQceeOCBBx544IEHHnjggQce%2BH%2FBc4xeXK1PtsSD1rycnn1LaKFPiVOdz59ve5rvmpmgu%2FWZaFf7qcpXazLCvQu635zRTMp1EJnNpFwGYdvdlK%2BXu2jLhZ6AZ3b3oNfcilq57fQnKDmurLwHwPXnlrhv42k9AGprq6tU7LX3AAAAAElFTkSuQmCC',
                                 'npm/v/jquery-autocomplete-js.svg?style=flat-square',
                                 'npm/l/jquery-autocomplete-js.svg?style=flat-square',
                                 'npm/dm/jquery-autocomplete-js.svg?style=flat-square'
-                              ]}
-                              description={<Text translate>autocomplete_js_description</Text>}
-                          />
-                      </div>
-                  }
+                            ],
+                            description: 'autocomplete_js_description',
+                            more: 'autocomplete_js_more'
+                        }
+                    ]}
+                </DescriptionSection>
+                <DescriptionSection
+                  logo='Planet3'
+                  text='experiments_description'
+                  block
                 >
-                    <Logo type='Planet6' />
-                </Description>
-                <DescriptionBlock
-                  size='L'
-                  text={<Text translate>experiments_description</Text>}
-                  content={
-                      <div>
-                          <Card
-                              title='Weatherly'
-                              link='https://github.com/styczynski/weatherly'
-                              badges={[
+                    {[
+                        {
+                            title: 'Weatherly',
+                            link: 'https://github.com/styczynski/weatherly',
+                            badges: [
                                 'github/tag/styczynski/weatherly.svg?style=flat-square'
-                              ]}
-                              description={<Text translate>weatherly_description</Text>}
-                          />
-                          <Card
-                              title='utest'
-                              link='https://github.com/styczynski/bash-universal-tester'
-                              badges={[
+                            ],
+                            description: 'weatherly_description',
+                            more: 'weatherly_more'
+                        },
+                        {
+                            title: 'utest',
+                            link: 'https://github.com/styczynski/bash-universal-tester',
+                            badges: [
                                 'github/release/styczynski/bash-universal-tester.svg?style=flat-square'
-                              ]}
-                              description={<Text translate>utest_description</Text>}
-                          />
-                          <Card
-                              title='ipp-poly'
-                              link='https://github.com/styczynski/ipp-poly'
-                              badges={[
+                            ],
+                            description: 'utest_description',
+                            more: 'utest_more'
+                        },
+                        {
+                            title: 'ipp-poly',
+                            link: 'https://github.com/styczynski/ipp-poly',
+                            badges: [
                                 'travis/styczynski/ipp-poly.svg?style=flat-square',
                                 'github/tag/styczynski/ipp-poly.svg?style=flat-square'
-                              ]}
-                              description={<Text translate>ipp_poly_description</Text>}
-                          />
-                          <Card
-                              title='avr-weather-esp8266'
-                              link='https://github.com/styczynski/avr-weather-esp8266'
-                              badges={[
-                                'badge/Platform-AVR-green.svg?style=flat-square&logo=github'
-                              ]}
-                              description={<Text translate>avr_weather_esp8266_description</Text>}
-                          />
-                      </div>
-                  }
+                            ],
+                            description: 'ipp_poly_description',
+                            more: 'ipp_poly_more'
+                        },
+                        {
+                            title: 'avr-weather-esp8266',
+                            link: 'https://github.com/styczynski/avr-weather-esp8266',
+                            badges: [
+                               'badge/Platform-AVR-green.svg?style=flat-square&logo=github'
+                            ],
+                            description: 'avr_weather_esp8266_description',
+                            more: 'avr_weather_esp8266_more'
+                        }
+                    ]}
+                </DescriptionSection>
+                <DescriptionSection
+                  logo='Planet5'
+                  text='space_junk_description'
                 >
-                    <Logo type='Planet3' />
-                </DescriptionBlock>
-                <Description
-                  size='L'
-                  text={<Text translate>space_junk_description</Text>}
-                  content={
-                      <div>
-                          <Card
-                              title='Tic Tac Console'
-                              link='https://github.com/styczynski/TicTacConsole'
-                              badges={[
+                    {[
+                        {
+                            title: 'Tic Tac Console',
+                            link: 'https://github.com/styczynski/TicTacConsole',
+                            badges: [
                                 'badge/platform-windows-blue.svg?style=flat-square&logoWidth=20&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA%2FwD%2FAP%2BgvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJTUUH4AgSEisSipueyAAAAHBJREFUSMdjZKA2WPv%2BPzKXkSxDiuf%2FZ7AKIEopbgsW3v%2FPwCOA4AcLMqK7jhjAQo4mUgATA43BqAWjFlADiCvQ1HjsuXNJIwPD%2BgmMtLMAGyCzqBhNRaMWDAELWBiCBRmJrcDJy2hUaj1Q3wIiLQcAUjQgoD1kMJYAAAAASUVORK5CYII%3D'
-                              ]}
-                              description={<Text translate>tic_tac_console_description</Text>}
-                          />
-                          <Card
-                              title='WACCGL'
-                              link='https://github.com/styczynski/WACCGL'
-                              badges={[
+                            ],
+                            description: 'tic_tac_console_description',
+                            more: 'tic_tac_console_more'
+                        },
+                        {
+                            title: 'WACCGL',
+                            link: 'https://github.com/styczynski/WACCGL',
+                            badges: [
                                 'badge/platform-windows-blue.svg?style=flat-square&logoWidth=20&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA%2FwD%2FAP%2BgvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJTUUH4AgSEisSipueyAAAAHBJREFUSMdjZKA2WPv%2BPzKXkSxDiuf%2FZ7AKIEopbgsW3v%2FPwCOA4AcLMqK7jhjAQo4mUgATA43BqAWjFlADiCvQ1HjsuXNJIwPD%2BgmMtLMAGyCzqBhNRaMWDAELWBiCBRmJrcDJy2hUaj1Q3wIiLQcAUjQgoD1kMJYAAAAASUVORK5CYII%3D'
-                              ]}
-                              description={<Text translate>waccgl_description</Text>}
-                          />
-                      </div>
-                  }
-                >
-                    <Logo type='Planet5' />
-                </Description>
+                            ],
+                            description: 'waccgl_description',
+                            more: 'waccgl_more'
+                        }
+                    ]}
+                </DescriptionSection>
             </div>
         );
     }

@@ -48,8 +48,8 @@ const Table = styled.table`
 `;
 
 interface DescriptionTextWrapperProps {
-  fontSize?: string,
-  theme?: any
+  fontSize?: string;
+  theme?: any;
 };
 
 const DescriptionTextWrapper = styled.div<DescriptionTextWrapperProps>`
@@ -68,12 +68,19 @@ export interface DescriptionProps {
     children?: any;
     text?: any;
     content?: any;
+    fullBar?: boolean;
+    onMouseOver?: () => void;
+    onMouseOut?: () => void;
 }
 
 export default class Description extends React.Component<DescriptionProps, undefined> {
     render() {
         return (
-            <Wrapper fontSize={this.props.size}>
+            <Wrapper
+                fontSize={this.props.size}
+                onMouseOver={this.props.onMouseOver}
+                onMouseOut={this.props.onMouseOut}
+            >
                 <Table>
                     <tbody>
                         <tr>

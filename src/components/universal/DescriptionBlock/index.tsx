@@ -13,7 +13,7 @@ const Wrapper = styled.div<WrapperProps>`
   font-size: ${(props: WrapperProps) => props.theme.fontSize[props.fontSize || 'default']};
   color: ${(props: WrapperProps) => props.theme.colors.lightAccent};
   padding: ${(props: WrapperProps) => (props.fullBar)?('2.2vw'):('1.2vw')};
-  width: ${(props: WrapperProps) => (props.fullBar)?('100vw'):('100%')};
+  width: ${(props: WrapperProps) => (props.fullBar)?('94vw'):('100%')};
   background: ${(props: WrapperProps) => (props.fullBar)?(props.theme.colors.primaryGradient):('transparent')};
   ${(props: WrapperProps) => (props.fullBar)?('position: relative; left: -4vw;'):('')}
 `;
@@ -51,12 +51,19 @@ export interface DescriptionBoxProps {
     text?: any;
     content?: any;
     fullBar?: boolean;
+    onMouseOver?: () => void;
+    onMouseOut?: () => void;
 }
 
 export default class DescriptionBox extends React.Component<DescriptionBoxProps, undefined> {
     render() {
         return (
-            <Wrapper fullBar={this.props.fullBar} fontSize={this.props.size}>
+            <Wrapper
+                fullBar={this.props.fullBar}
+                fontSize={this.props.size}
+                onMouseOver={this.props.onMouseOver}
+                onMouseOut={this.props.onMouseOut}
+            >
                 <DescriptionTextWrapper fullBar={this.props.fullBar} fontSize={this.props.size}>
                     <ContentWrapper>
                         {this.props.children}

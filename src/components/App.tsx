@@ -22,8 +22,11 @@ library.add(
 
 const AppWrapper = styled.div`
   background: ${props => props.theme.colors.background};
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100vh;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   border: none;

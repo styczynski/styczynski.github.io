@@ -6,20 +6,28 @@ import CardTitle from 'components/CardTitle';
 import CardDescription from 'components/CardDescription';
 import Badge from 'components/Badge';
 
-const Wrapper = styled.div`
+interface WrapperProps {
+    theme: any;
+    hoverable?: boolean;
+    onMouseOver: () => void;
+    onMouseOut: () => void;    
+};
+
+const Wrapper = styled.div<WrapperProps>`
   padding: 1.2vw;
   margin: 1vw;
   width: 100%;
-  border-left: 0.3vw solid ${(props) => props.theme.colors.primary};
+  max-width: 80vw;
+  border-left: 0.3vw solid ${(props: WrapperProps) => props.theme.colors.primary};
   background: transparent;
-  font-family: ${(props) => props.theme.primaryFont};
-  color: ${(props) => props.theme.colors.primaryText};
+  font-family: ${(props: WrapperProps) => props.theme.primaryFont};
+  color: ${(props: WrapperProps) => (props.hoverable === false)?(props.theme.colors.accent):(props.theme.colors.primaryText)};
   cursor: pointer;
   
   &:hover {
-    border-left: 0.3vw solid ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.primaryGradient};
-    color: ${(props) => props.theme.colors.accent};
+    border-left: 0.3vw solid ${(props: WrapperProps) => props.theme.colors.primary};
+    background: ${(props: WrapperProps) => props.theme.colors.primaryGradient};
+    color: ${(props: WrapperProps) => props.theme.colors.accent};
   }
 `;
 
@@ -36,12 +44,31 @@ const BadgeWrapper = styled.div`
   margin-right: 0.5vw;
 `;
 
+const MoreWrapper = styled.div`
+  font-family: ${(props) => props.theme.primaryFont};
+  width: 10vw;
+  border: solid 0.15vw transparent;
+  
+  &:hover {
+    border: solid 0.15vw ${(props) => props.theme.colors.lightAccent};
+  }
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
 export interface CardProps {
     title: string;
     badges?: Array<string>;
     description?: any;
     image?: string;
     link?: string;
+    more?: boolean;
+    hoverable?: boolean;
+    onMore?: () => void;
+    onMouseOver?: () => void;
+    onMouseOut?: () => void;
 }
 
 export default class Card extends React.Component<CardProps, undefined> {
@@ -60,8 +87,12 @@ export default class Card extends React.Component<CardProps, undefined> {
     
     render() {
         return (
-            <Wrapper onClick={this.handleClick}>
-                <table>
+            <Wrapper
+                onMouseOver={this.props.onMouseOver}
+                onMouseOut={this.props.onMouseOut}
+                hoverable={this.props.hoverable}
+            >
+                <table onClick={this.handleClick}>
                     <tbody>
                         <tr>
                             {
@@ -93,6 +124,15 @@ export default class Card extends React.Component<CardProps, undefined> {
                                 {this.props.description}
                             </CardDescription>
                         </div>
+                    )
+                }
+                {
+                    (!this.props.more)?(null):(
+                        <MoreWrapper
+                            onClick={this.props.onMore}
+                        >
+                            More...
+                        </MoreWrapper>
                     )
                 }
             </Wrapper>
