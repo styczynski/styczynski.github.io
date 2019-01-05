@@ -56,6 +56,10 @@ const DescriptionTextWrapper = styled.div<DescriptionTextWrapperProps>`
   color: ${(props: DescriptionTextWrapperProps) => props.theme.colors.primaryText};
   font-family: ${(props: DescriptionTextWrapperProps) => props.theme.primaryFont};
   font-size: ${(props: DescriptionTextWrapperProps) => props.theme.fontSize[props.fontSize || 'default']};
+  
+  @media (max-width: 500px) {
+      font-size: ${(props: WrapperProps) => props.theme.fontSize.XXL};
+  }
 `;
 
 

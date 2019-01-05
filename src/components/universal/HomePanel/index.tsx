@@ -272,9 +272,7 @@ class HomePanel extends React.Component<HomePanelProps, HomePanelState> {
                   size='L'
                   text={<Text translate>experiments_description</Text>}
                   content={
-                      <div>
-                          Hello!
-                      </div>
+                      <div></div>
                   }
                 >
                     <Logo type='Planet1' />

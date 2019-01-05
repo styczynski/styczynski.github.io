@@ -9,6 +9,10 @@ interface WrapperProps {
 const Wrapper = styled.div`
   font-family: ${(props: WrapperProps) => props.theme.primaryFont};
   font-size: ${(props: WrapperProps) => props.theme.fontSize[props.fontSize || 'default']};
+  
+  @media (max-width: 500px) {
+      font-size: ${(props: WrapperProps) => props.theme.fontSize.XXL};
+  }
 `;
 
 export interface CardDescriptionProps {

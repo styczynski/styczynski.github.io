@@ -7,6 +7,12 @@ const Wrapper = styled.span`
             height: 2vw;
         }
     }
+    
+    @media (max-width: 500px) {
+        & img {
+            height: 4vw;
+        }
+    }
 `;
 
 export interface BadgeProps {

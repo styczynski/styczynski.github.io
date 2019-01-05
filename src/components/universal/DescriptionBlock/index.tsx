@@ -38,6 +38,10 @@ const DescriptionTextWrapper = styled.div<DescriptionWrapperProps>`
   color: ${(props: DescriptionWrapperProps) => (props.fullBar)?(props.theme.colors.lightAccent):(props.theme.colors.primaryText)};
   font-family: ${(props: DescriptionWrapperProps) => props.theme.primaryFont};
   font-size: ${(props: DescriptionWrapperProps) => props.theme.fontSize[props.fontSize || 'default']};
+  
+  @media (max-width: 500px) {
+      font-size: ${(props: WrapperProps) => props.theme.fontSize.XXL};
+  }
 `;
 
 
