@@ -1,7 +1,7 @@
 {
-  "name": "react-webpack-typescript-starter",
-  "version": "0.1.0",
-  "description": "Starter kit for React, Webpack (with Hot Module Replacement), Typescript and Babel.",
+  "name": "styczynski-portfolio",
+  "version": "0.0.1",
+  "description": "React portfolio of mine - Piotr Styczynski",
   "keywords": [
     "react",
     "webpack",
@@ -9,19 +9,15 @@
     "babel",
     "sass",
     "hmr",
-    "starter",
-    "boilerplate"
+    "portfolio"
   ],
-  "author": "Viktor Persson",
+  "author": "Piotr Styczynski",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vikpe/react-webpack-typescript-starter.git"
+    "url": "git+https://github.com/styczynski/styczynski.github.io.git"
   },
-  "bugs": {
-    "url": "https://github.com/vikpe/react-webpack-typescript-starter/issues"
-  },
-  "homepage": "https://github.com/vikpe/react-webpack-typescript-starter",
+  "homepage": "http://styczynski.in",
   "scripts": {
     "build": "yarn run clean-dist && webpack -p --config=configs/webpack/prod.js && jest --coverage --config=configs/jest.json",
     "clean-dist": "rm -f -r -d dist",
